@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11430012}
   - 114: {fileID: 11406328}
   - 114: {fileID: 11487926}
-  - 95: {fileID: 9526784}
+  - 95: {fileID: 9566892}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.01}
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.3}
---- !u!95 &9526784
+--- !u!95 &9566892
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
