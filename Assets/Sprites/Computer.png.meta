@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e929009aef7b34445a4365cdfe7fe51b
-timeCreated: 1467487017
+timeCreated: 1467498597
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -85,7 +85,7 @@ TextureImporter:
     - name: Computer_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
         width: 32
         height: 32
@@ -93,21 +93,22 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: -8}
-        - {x: -7, y: -8}
-        - {x: -12, y: -8}
-        - {x: -16, y: -12}
-        - {x: -16, y: -15}
-        - {x: -14, y: -16}
-        - {x: 14, y: -16}
-        - {x: 14, y: -6}
-        - {x: 9, y: 14}
-        - {x: -15, y: 14}
-        - {x: -14, y: -6}
+      - - {x: -13, y: -3}
+        - {x: -12, y: -5}
+        - {x: -9, y: -8}
+        - {x: -6, y: -8}
+        - {x: -11, y: -8}
+        - {x: -15, y: -12}
+        - {x: -15, y: -14}
+        - {x: -13, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: -13}
+        - {x: 10, y: 14}
+        - {x: -13, y: 14}
     - name: Computer_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
         width: 32
         height: 32
@@ -115,15 +116,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14, y: 14}
-        - {x: -16, y: 5}
-        - {x: -16, y: -16}
-        - {x: 14, y: -16}
+      - - {x: -15, y: 6}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 8}
         - {x: 14, y: 14}
+        - {x: -13, y: 14}
     - name: Computer_3
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -131,17 +133,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 6}
-        - {x: -16, y: -16}
-        - {x: 14, y: -16}
-        - {x: 14, y: -3}
-        - {x: 10, y: 13}
-        - {x: 9, y: 14}
-        - {x: -14, y: 14}
+      - - {x: 10, y: 14}
+        - {x: -15, y: 14}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: -5}
+        - {x: 11, y: 13}
     - name: Computer_die0
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
         width: 32
         height: 32
@@ -149,22 +150,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 14, y: 2}
+      - - {x: -9, y: 14}
+        - {x: -13, y: 13}
+        - {x: -13, y: -7}
+        - {x: -9, y: -9}
+        - {x: -6, y: -9}
+        - {x: -11, y: -9}
+        - {x: -15, y: -12}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 0}
         - {x: 12, y: 14}
-        - {x: -12, y: 14}
-        - {x: -14, y: 13}
-        - {x: -14, y: -7}
-        - {x: -10, y: -9}
-        - {x: -7, y: -9}
-        - {x: -12, y: -9}
-        - {x: -16, y: -13}
-        - {x: -16, y: -16}
-        - {x: 13, y: -16}
-        - {x: 14, y: -15}
     - name: Computer_die1
       rect:
         serializedVersion: 2
-        x: 161
+        x: 160
         y: 0
         width: 32
         height: 32
@@ -172,20 +172,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -15, y: 13}
-        - {x: -14, y: -7}
-        - {x: -10, y: -9}
-        - {x: -7, y: -9}
-        - {x: -12, y: -9}
-        - {x: -16, y: -13}
-        - {x: -16, y: -16}
-        - {x: 14, y: -16}
-        - {x: 14, y: -10}
-        - {x: 9, y: 13}
+      - - {x: -13, y: 13}
+        - {x: -13, y: -4}
+        - {x: -12, y: -6}
+        - {x: -9, y: -9}
+        - {x: -6, y: -9}
+        - {x: -11, y: -9}
+        - {x: -15, y: -12}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 6}
+        - {x: 12, y: 13}
     - name: Computer_die2
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 0
         width: 32
         height: 32
@@ -193,16 +194,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 12}
-        - {x: -14, y: 12}
-        - {x: -16, y: -4}
-        - {x: -16, y: -16}
-        - {x: 14, y: -16}
-        - {x: 14, y: -11}
+      - - {x: -13, y: 12}
+        - {x: -15, y: -4}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: -9}
+        - {x: 10, y: 12}
     - name: Computer_die3
       rect:
         serializedVersion: 2
-        x: 225
+        x: 224
         y: 0
         width: 32
         height: 32
@@ -210,16 +211,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 12}
-        - {x: -14, y: 12}
-        - {x: -16, y: -4}
-        - {x: -16, y: -16}
-        - {x: 14, y: -16}
-        - {x: 14, y: -11}
+      - - {x: -13, y: 12}
+        - {x: -15, y: -4}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: -9}
+        - {x: 10, y: 12}
     - name: Computer_die4
       rect:
         serializedVersion: 2
-        x: 257
+        x: 256
         y: 0
         width: 32
         height: 32
@@ -227,19 +228,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 11, y: 11}
-        - {x: -12, y: 11}
-        - {x: -13, y: 9}
-        - {x: -13, y: -4}
-        - {x: -16, y: -11}
-        - {x: -16, y: -16}
-        - {x: 14, y: -16}
-        - {x: 14, y: -5}
-        - {x: 12, y: 10}
+      - - {x: -11, y: 11}
+        - {x: -12, y: 9}
+        - {x: -15, y: -4}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 11}
     - name: Computer_die5
       rect:
         serializedVersion: 2
-        x: 289
+        x: 288
         y: 0
         width: 31
         height: 32
