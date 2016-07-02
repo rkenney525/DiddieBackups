@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AirControlModifier: 0.5
+  AxeReference: {fileID: 114978, guid: e6ec9d0444b20de4b8e44d3667978d32, type: 2}
 --- !u!114 &11487926
 MonoBehaviour:
   m_ObjectHideFlags: 1

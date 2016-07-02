@@ -13,6 +13,9 @@ public class PlayerControlAbility : MonoBehaviour {
     [SerializeField]
     private float AirControlModifier = 0.5f;
 
+    [SerializeField]
+    public GameObject AxeReference;
+
     // Attributes
     private GroundDetectionScript GroundCheck;
     private Rigidbody2D Rigidbody2D;
@@ -21,6 +24,7 @@ public class PlayerControlAbility : MonoBehaviour {
     // Constants
     private const float GroundCheckRadius = .05f;
     private const float CeilingRadius = .01f;
+    private const float AXE_SPEED = 10.0f;
 
     // Use this for initialization
     void Start() {
@@ -90,4 +94,18 @@ public class PlayerControlAbility : MonoBehaviour {
         transform.localScale = theScale;
     }
 
+
+    public void ThrowAxe(Vector2 position, Vector2 reticule) {
+        reticule = ViewportToDiddieView(reticule);
+        GameObject axe = Instantiate(AxeReference);
+        Vector2 velocity = new Vector2(reticule.x,
+            reticule.y) * AXE_SPEED;
+        Rigidbody2D axeBody = axe.GetComponent<Rigidbody2D>();
+        axeBody.position = transform.position;
+        axeBody.velocity = velocity;
+    }
+
+    Vector2 ViewportToDiddieView(Vector2 viewport) {
+        return new Vector2(viewport.x - 0.5f, viewport.y - 0.5f);
+    }
 }
