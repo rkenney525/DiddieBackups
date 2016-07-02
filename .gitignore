@@ -1,0 +1,13 @@
+/*.exe
+/*.pdb
+Thumbs.db
+/DiddieBackups.userprefs
+/*_Data
+/obj/Debug
+/Library
+/Temp
+/DiddieBackups.v12.suo
+/DiddieBackups.CSharp.csproj
+/DiddieBackups.sln
+/.vs
+/DiddieBackups.CSharp.Plugins.csproj
