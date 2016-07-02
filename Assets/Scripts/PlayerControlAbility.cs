@@ -7,7 +7,7 @@ using System.Collections;
 [RequireComponent(typeof(GroundDetectionScript))]
 public class PlayerControlAbility : MonoBehaviour {
     // Configurable properties
-    private float MaxSpeed = 5f;
+    private float MaxSpeed = 2f;
     private float JumpForce = 200f;
     [Range(0, 1)]
     [SerializeField]
@@ -18,19 +18,6 @@ public class PlayerControlAbility : MonoBehaviour {
     private Rigidbody2D Rigidbody2D;
     private bool facingLeft = true;
     // TODO private Animator anim;
-    private bool ignoreLedge = false;
-    public bool IgnoreLedge {
-        get { return this.ignoreLedge; }
-        set { this.ignoreLedge = value; }
-    }
-    public enum PlayerControlState {
-        NORMAL, LEDGE
-    }
-    private PlayerControlState state;
-    public PlayerControlState State {
-        get { return this.state; }
-        set { this.state = value; }
-    }
     // Constants
     private const float GroundCheckRadius = .05f;
     private const float CeilingRadius = .01f;
