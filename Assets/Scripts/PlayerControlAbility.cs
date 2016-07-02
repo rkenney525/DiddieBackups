@@ -19,7 +19,7 @@ public class PlayerControlAbility : MonoBehaviour {
     // Attributes
     private GroundDetectionScript GroundCheck;
     private Rigidbody2D Rigidbody2D;
-    private bool facingLeft = true;
+    private bool facingLeft = false;
     // TODO private Animator anim;
     // Constants
     private const float GroundCheckRadius = .05f;
