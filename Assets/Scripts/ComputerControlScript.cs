@@ -71,7 +71,7 @@ public class ComputerControlScript : MonoBehaviour {
             }
         }
 
-        public void ShootLightning(Vector2 position, Vector2 reticule) {
+        public void ShootLightning(Vector2 angle) {
             // TODO shoot lightning
         }
 
