@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f36a39dce13f38e48b6f5f0aaebabc07
-timeCreated: 1467485065
+timeCreated: 1467546642
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,7 +8,13 @@ TextureImporter:
     21300002: Hacker_1
     21300004: Hacker_2
     21300006: Hacker_3
-    21300008: Hacker_Arm
+    21300008: Hacker_die0
+    21300010: Hacker_die1
+    21300012: Hacker_die2
+    21300014: Hacker_die3
+    21300016: Hacker_5
+    21300018: Hacker_die4
+    21300020: Hacker_die5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,57 +65,202 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 16
+        y: 32
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
     - name: Hacker_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
+        x: 32
+        y: 32
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -4, y: 14}
+        - {x: -8, y: 13}
+        - {x: -8, y: -16}
+        - {x: 6, y: -16}
+        - {x: 7, y: -15}
+        - {x: 7, y: -14}
+        - {x: 5, y: 12}
     - name: Hacker_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
+        x: 64
+        y: 32
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
     - name: Hacker_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
+        x: 96
+        y: 32
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Hacker_Arm
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -4, y: 14}
+        - {x: -8, y: 13}
+        - {x: -8, y: -16}
+        - {x: 6, y: -16}
+        - {x: 7, y: -15}
+        - {x: 7, y: -14}
+        - {x: 5, y: 12}
+    - name: Hacker_die0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
+        x: 128
+        y: 32
+        width: 32
         height: 32
       alignment: 9
       pivot: {x: 0.4778366, y: 0.6108156}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3.7092285, y: 10.453903}
+        - {x: -2.2907715, y: 10.453903}
+        - {x: -5.2907715, y: 9.453903}
+        - {x: -5.2907715, y: -16.546097}
+        - {x: -4.2907715, y: -19.546097}
+        - {x: 5.7092285, y: -19.546097}
+        - {x: 5.7092285, y: 8.453903}
+    - name: Hacker_die1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
+    - name: Hacker_die2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
+    - name: Hacker_die3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
+    - name: Hacker_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
+    - name: Hacker_die4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
+    - name: Hacker_die5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -3, y: 14}
+        - {x: -6, y: 13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -16}
+        - {x: 5, y: -16}
+        - {x: 5, y: 12}
     outline: []
   spritePackingTag: 
   userData: 
