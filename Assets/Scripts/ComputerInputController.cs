@@ -27,13 +27,13 @@ public class ComputerInputController : MonoBehaviour {
 
     void FixedUpdate() {
         // Pass all parameters to the character control script.
-        float horizontal = Input.GetAxis("JoyHorizontal");
+        float horizontal = Input.GetAxis("JoyLeftHorizontal");
         control.NormalMove(horizontal, jump);
         jump = false;
 
-        if (Input.GetMouseButtonDown(0)) {
-            //playerControl.ThrowAxe(cam.WorldToViewportPoint(transform.position),
-            //    cam.ScreenToViewportPoint(Input.mousePosition));
-        }
+        float lightningX = Input.GetAxis("JoyRightHorizontal");
+        float lightningY = Input.GetAxis("JoyRightVertical");
+
+        control.ShootLightning(new Vector2(lightningX, lightningY));
     }
 }

@@ -6,7 +6,7 @@ public class LightningControlAbility : MonoBehaviour {
     /// <summary>
     /// The time, in milliseconds, to wait before destroying self
     /// </summary>
-    private readonly float TTL = 2.5f;
+    private readonly float TTL = 0.5f;
 
     /// <summary>
     /// Kick off the waiting coroutine
