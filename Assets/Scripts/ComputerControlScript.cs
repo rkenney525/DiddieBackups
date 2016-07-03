@@ -74,11 +74,11 @@ public class ComputerControlScript : MonoBehaviour {
         }
 
         public void ShootLightning(Vector2 angle) {
-            if (Mathf.Abs(angle.x+angle.y)>0f)
-            {
+            if (Mathf.Abs(angle.x+angle.y)>0f) {
                 GameObject attack = Instantiate(ShockReference);
                 attack.transform.position = this.transform.position;
-                
+                Debug.Log(Vector2.Angle(Vector2.zero, angle));
+                attack.transform.rotation = Quaternion.Euler(0, 0, Vector2.Angle(Vector2.zero, angle));
             }
         }
 
