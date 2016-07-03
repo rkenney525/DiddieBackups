@@ -8,7 +8,7 @@ using System.Collections;
 public class PlayerControlAbility : MonoBehaviour {
     // Configurable properties
     private float MaxSpeed = 2f;
-    private float JumpForce = 200f;
+    private float JumpForce = 250f;
     [Range(0, 1)]
     [SerializeField]
     private float AirControlModifier = 0.5f;
