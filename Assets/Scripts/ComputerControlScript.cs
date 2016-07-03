@@ -52,7 +52,8 @@ public class ComputerControlScript : MonoBehaviour {
                 swapping = true;
                 Switch();
             }
-            transform.position = Vector3.Lerp(from, to, fracJourney);
+            float tx = Mathf.Lerp(from.x, to.x, fracJourney);
+            transform.position = new Vector3(tx, transform.position.y, transform.position.z);
         }
     }
 }
