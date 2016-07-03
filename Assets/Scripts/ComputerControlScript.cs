@@ -6,7 +6,7 @@ using System.Collections;
 /// </summary>
 public class ComputerControlScript : MonoBehaviour {
         // Configurable properties
-        private float MaxSpeed = 2f;
+        private float MaxSpeed = 3.5f;
         private float JumpForce = 200f;
         [Range(0, 1)]
         [SerializeField]
