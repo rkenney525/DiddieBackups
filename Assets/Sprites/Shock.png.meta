@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 437aabd354aa9264cb84bbab4bb189e2
+timeCreated: 1467549758
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Shock_0
+    21300002: Shock_1
+    21300004: Shock_2
+    21300006: Shock_3
+    21300008: Shock_4
+    21300010: Shock_5
+    21300012: Shock_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Shock_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.015366385, y: 0.53546095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.033103943, y: 6.8652496}
+        - {x: -1.966896, y: 4.8652496}
+        - {x: -1.966896, y: -4.1347504}
+        - {x: 8.033104, y: -6.1347504}
+        - {x: 32.033104, y: -6.1347504}
+        - {x: 34.033104, y: -3.1347504}
+        - {x: 34.033104, y: 5.8652496}
+        - {x: 27.033104, y: 6.8652496}
+    - name: Shock_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.018321514, y: 0.48817968}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.3451538, y: 12.37825}
+        - {x: -2.3451538, y: -4.62175}
+        - {x: 45.654846, y: -4.62175}
+        - {x: 49.654846, y: -0.6217499}
+        - {x: 49.654846, y: 11.37825}
+        - {x: 48.654846, y: 12.37825}
+    - name: Shock_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.018321468, y: 0.52364063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.3451462, y: 13.2435}
+        - {x: -2.3451462, y: -9.7565}
+        - {x: 77.654854, y: -9.7565}
+        - {x: 77.654854, y: 7.2434998}
+        - {x: 67.654854, y: 13.2435}
+    - name: Shock_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.018321514, y: 0.46453905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.654846, y: 15.13475}
+        - {x: 0.6548462, y: 12.13475}
+        - {x: -2.3451538, y: 6.1347504}
+        - {x: -2.3451538, y: -7.8652496}
+        - {x: 86.65485, y: -7.8652496}
+        - {x: 98.65485, y: -3.8652496}
+        - {x: 98.65485, y: 8.13475}
+        - {x: 79.65485, y: 15.13475}
+    - name: Shock_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.012411302, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.4113541, y: 14}
+        - {x: -1.5886459, y: 8}
+        - {x: -1.5886459, y: -9}
+        - {x: 99.411354, y: -9}
+        - {x: 117.411354, y: -5}
+        - {x: 117.411354, y: 14}
+    - name: Shock_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.015366435, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.9669037, y: 14}
+        - {x: -1.9669037, y: -9}
+        - {x: 117.0331, y: -9}
+        - {x: 125.0331, y: -6}
+        - {x: 125.0331, y: 14}
+    - name: Shock_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 32
+      alignment: 9
+      pivot: {x: 0.012411302, y: 0.48817956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.411354, y: 15.378254}
+        - {x: -1.5886459, y: 5.378254}
+        - {x: -1.5886459, y: -11.621746}
+        - {x: 126.411354, y: -11.621746}
+        - {x: 126.411354, y: 15.378254}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
