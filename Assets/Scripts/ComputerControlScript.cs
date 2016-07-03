@@ -30,6 +30,8 @@ public class ComputerControlScript : MonoBehaviour {
 
     private float health = 10.0f;
 
+    bool immune = false;
+
     void Start() {
         rigidbody2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -79,33 +81,27 @@ public class ComputerControlScript : MonoBehaviour {
         anim.SetBool("moving", moving);
     }
 
-    void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.layer == LayerMask.NameToLayer("Wall"))
-        {
-            direction *= 1f;
-            Debug.Log("Wall!");
-        }
-        if (coll.gameObject.layer == LayerMask.NameToLayer("Projectile")) {
-            TakeDamage(coll.gameObject.GetComponent<AxeStats>().Damage);
+    public void TakeDamage(float damage) {
+        if (!immune) {
+            anim.SetTrigger("hit");
+            health -= damage;
             if (health <= 0f) {
                 Die();
+            } else {
+                Stop();
             }
         }
     }
 
-    private void TakeDamage(float damage) {
-        anim.SetTrigger("hit");
-        health -= damage;
-        Stop();
-    }
-
     private IEnumerator Wait(float time) {
         stopped = true;
+        immune = true;
         yield return new WaitForSeconds(time);
+        immune = false;
         stopped = false;
     }
 
-    private void Die() {
+    public void Die() {
         anim.SetBool("dead", true);
         rigidbody2d.constraints = RigidbodyConstraints2D.FreezeAll;
         stopped = true;

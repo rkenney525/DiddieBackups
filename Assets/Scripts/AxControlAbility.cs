@@ -30,4 +30,10 @@ public class AxControlAbility : MonoBehaviour {
         yield return new WaitForSeconds(TTL);
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D coll) {
+        if (coll.gameObject.layer == LayerMask.NameToLayer("Hittable")) {
+            coll.gameObject.GetComponent<ComputerControlScript>().TakeDamage(GetComponent<AxeStats>().Damage);
+        }
+    }
 }
