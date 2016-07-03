@@ -26,6 +26,8 @@ public class PlayerControlAbility : MonoBehaviour {
     private const float CeilingRadius = .01f;
     private const float AXE_SPEED = 10.0f;
     private const float ROTATE_SPEED = 360f;
+    private const float MAX_SPEED = 5f;
+    private const float MIN_SPEED = 1f;
 
     private float DAMAGE_MULTIPLIER = 5.0f;
 
@@ -105,8 +107,12 @@ public class PlayerControlAbility : MonoBehaviour {
             reticule.y) * AXE_SPEED;
         Rigidbody2D axeBody = axe.GetComponent<Rigidbody2D>();
         AxeStats axeStats = axe.GetComponent<AxeStats>();
+
+        // movement
         axeBody.position = transform.position;
         axeBody.velocity = velocity;
+
+        // rotation
         float rotation = ROTATE_SPEED * (velocity.x < 0 ? 1f : -1f);
         axeBody.AddTorque(rotation, ForceMode2D.Force);
         axeStats.Damage *= DAMAGE_MULTIPLIER;
@@ -114,5 +120,17 @@ public class PlayerControlAbility : MonoBehaviour {
 
     Vector2 ViewportToDiddieView(Vector2 viewport) {
         return new Vector2(viewport.x - 0.5f, viewport.y - 0.5f);
+    }
+
+    Vector2 BoundVector2(Vector2 vector) {
+        return new Vector2(BoundValue(vector.x), BoundValue(vector.y));
+    }
+
+    float BoundValue(float value) {
+        if (value < 0) {
+            return Mathf.Max(Mathf.Min(value, -MAX_SPEED), -MIN_SPEED);
+        } else {
+            return Mathf.Max(Mathf.Min(value, MIN_SPEED), MAX_SPEED);
+        }
     }
 }
