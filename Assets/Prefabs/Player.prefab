@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11406328}
   - 114: {fileID: 11487926}
   - 95: {fileID: 9566892}
+  - 114: {fileID: 11408968}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -126,6 +127,18 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &11408968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968b911f1da844641a80de4a7ca367b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!114 &11430012
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,6 +12,9 @@ GameObject:
   - 61: {fileID: 6177974}
   - 95: {fileID: 9581212}
   - 114: {fileID: 11478452}
+  - 114: {fileID: 11442182}
+  - 114: {fileID: 11401052}
+  - 114: {fileID: 11422854}
   m_Layer: 10
   m_Name: Computer
   m_TagString: Untagged
@@ -110,6 +113,43 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11401052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b441b529ed4dddf4bacd5db37422ea39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &11422854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968b911f1da844641a80de4a7ca367b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+--- !u!114 &11442182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ed234018045164d8bd4aa6d2d38458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11478452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,9 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154f62197f37e8440958154706cbceec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
-  Bound1: {x: -3, y: 0}
-  Bound2: {x: 3, y: 0}
+  AirControlModifier: 0.5
+  AxeReference: {fileID: 0}
 --- !u!212 &21280194
 SpriteRenderer:
   m_ObjectHideFlags: 1
