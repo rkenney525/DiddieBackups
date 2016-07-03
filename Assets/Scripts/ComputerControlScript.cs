@@ -12,11 +12,14 @@ public class ComputerControlScript : MonoBehaviour {
     public Vector2 Bound1;
     [SerializeField]
     public Vector2 Bound2;
+
     float journeyLength;
 
     private Rigidbody2D rigidbody2d;
 
     private float startTime;
+
+    private float direction = 1f;
 
     private bool stopped = false;
 
@@ -54,18 +57,24 @@ public class ComputerControlScript : MonoBehaviour {
     void Update() {
         if (!stopped) {
             float distCovered = (Time.time - startTime) * Speed;
-            float fracJourney = distCovered / journeyLength;
-            if (fracJourney >= 1.0f) {
-                stopped = true;
-                Switch();
-            }
-            float tx = Mathf.Lerp(from.x, to.x, fracJourney);
+            //float fracJourney = distCovered / journeyLength;
+            //if (fracJourney >= 1.0f) {
+            //    stopped = true;
+            //    Switch();
+            //}
+            //float tx = Mathf.Lerp(from.x, to.x, fracJourney);
+            float tx = transform.position.x + (direction * distCovered);
             transform.position = new Vector3(tx, transform.position.y, transform.position.z);
 
         }
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
+        if (coll.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            direction *= 1f;
+            Debug.Log("Wall!");
+        }
         if (coll.gameObject.layer == LayerMask.NameToLayer("Projectile")) {
             TakeDamage(coll.gameObject.GetComponent<AxeStats>().Damage);
             if (health <= 0f) {
