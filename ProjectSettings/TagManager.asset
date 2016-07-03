@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - Ground
-  - Projectile
-  - Hittable
-  - 
-  - 
+  - PlayerProjectile
+  - PlayerHittable
+  - ComputerProjectile
+  - ComputerHittable
   - 
   - 
   - 

@@ -10,11 +10,6 @@ public class AxControlAbility : MonoBehaviour {
     /// </summary>
     private readonly float TTL = 2.5f;
 
-    static AxControlAbility() {
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Projectile"), LayerMask.NameToLayer("Hittable"), false);
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Projectile"), LayerMask.NameToLayer("Default"), true);
-    }
-
     /// <summary>
     /// Kick off the waiting coroutine
     /// </summary>
@@ -32,7 +27,7 @@ public class AxControlAbility : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.gameObject.layer == LayerMask.NameToLayer("Hittable")) {
+        if (coll.gameObject.layer == LayerMask.NameToLayer("PlayerHittable")) {
             coll.gameObject.GetComponent<ComputerControlScript>().TakeDamage(GetComponent<AxeStats>().Damage);
         }
     }
