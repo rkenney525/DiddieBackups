@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6177974}
   - 95: {fileID: 9581212}
   - 114: {fileID: 11478452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Computer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 456928}
   - 212: {fileID: 21280194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ComputerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
