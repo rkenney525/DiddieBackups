@@ -9,7 +9,7 @@ public class ComputerInputController : MonoBehaviour {
     private Camera cam;
     private float shockDelayCountdown = 0f;
 
-    private float ShockAttackDelay = 0.4f;
+    private float ShockAttackDelay = 0.3f;
 
     // Use this for initialization
     void Start() {
