@@ -106,7 +106,7 @@ public class PlayerControlAbility : MonoBehaviour {
         Vector2 velocity = new Vector2(reticule.x,
             reticule.y) * AXE_SPEED;
         Rigidbody2D axeBody = axe.GetComponent<Rigidbody2D>();
-        AxeStats axeStats = axe.GetComponent<AxeStats>();
+        Stats axeStats = axe.GetComponent<Stats>();
 
         // movement
         axeBody.position = transform.position;
