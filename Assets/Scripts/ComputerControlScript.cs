@@ -16,6 +16,8 @@ public class ComputerControlScript : MonoBehaviour {
 
     private Rigidbody2D rigidbody2d;
 
+    private Animator anim;
+
     private float startTime;
 
     private bool stopped = false;
@@ -27,6 +29,7 @@ public class ComputerControlScript : MonoBehaviour {
 
     void Start() {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         startTime = Time.time;
         journeyLength = Vector3.Distance(Bound1, Bound2);
         from = Bound1;
@@ -52,7 +55,9 @@ public class ComputerControlScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        bool moving = false;
         if (!stopped) {
+            moving = true;
             float distCovered = (Time.time - startTime) * Speed;
             float fracJourney = distCovered / journeyLength;
             if (fracJourney >= 1.0f) {
@@ -63,6 +68,7 @@ public class ComputerControlScript : MonoBehaviour {
             transform.position = new Vector3(tx, transform.position.y, transform.position.z);
 
         }
+        anim.SetBool("moving", moving);
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
@@ -75,6 +81,7 @@ public class ComputerControlScript : MonoBehaviour {
     }
 
     private void TakeDamage(float damage) {
+        anim.SetTrigger("hit");
         health -= damage;
         Stop();
     }
@@ -86,6 +93,7 @@ public class ComputerControlScript : MonoBehaviour {
     }
 
     private void Die() {
+        anim.SetBool("dead", true);
         stopped = true;
     }
 }
