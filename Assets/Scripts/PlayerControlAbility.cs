@@ -25,6 +25,7 @@ public class PlayerControlAbility : MonoBehaviour {
     private const float GroundCheckRadius = .05f;
     private const float CeilingRadius = .01f;
     private const float AXE_SPEED = 10.0f;
+    private const float ROTATE_SPEED = 360f;
 
     // Use this for initialization
     void Start() {
@@ -103,6 +104,9 @@ public class PlayerControlAbility : MonoBehaviour {
         Rigidbody2D axeBody = axe.GetComponent<Rigidbody2D>();
         axeBody.position = transform.position;
         axeBody.velocity = velocity;
+        float rotation = ROTATE_SPEED * (velocity.x < 0 ? 1f : -1f);
+        axeBody.AddTorque(rotation, ForceMode2D.Force);
+        //axeBody.angularVelocity = ROTATE_SPEED;
     }
 
     Vector2 ViewportToDiddieView(Vector2 viewport) {
