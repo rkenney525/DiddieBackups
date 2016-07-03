@@ -9,9 +9,16 @@ public class LightningControlAbility : MonoBehaviour {
     private readonly float TTL = 0.5f;
 
     /// <summary>
+    /// Animation controller
+    /// </summary>
+    private Animator anim;
+
+    /// <summary>
     /// Kick off the waiting coroutine
     /// </summary>
     void Start() {
+        this.anim = this.GetComponent<Animator>();
+        anim.SetTrigger("Attack");
         StartCoroutine(Wait());
     }
 
