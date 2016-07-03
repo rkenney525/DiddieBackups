@@ -27,6 +27,8 @@ public class PlayerControlAbility : MonoBehaviour {
     private const float AXE_SPEED = 10.0f;
     private const float ROTATE_SPEED = 360f;
 
+    private float DAMAGE_MULTIPLIER = 1.0f;
+
     // Use this for initialization
     void Start() {
         // TODO this.anim = this.GetComponent<Animator>();
@@ -102,11 +104,12 @@ public class PlayerControlAbility : MonoBehaviour {
         Vector2 velocity = new Vector2(reticule.x,
             reticule.y) * AXE_SPEED;
         Rigidbody2D axeBody = axe.GetComponent<Rigidbody2D>();
+        AxeStats axeStats = axe.GetComponent<AxeStats>();
         axeBody.position = transform.position;
         axeBody.velocity = velocity;
         float rotation = ROTATE_SPEED * (velocity.x < 0 ? 1f : -1f);
         axeBody.AddTorque(rotation, ForceMode2D.Force);
-        //axeBody.angularVelocity = ROTATE_SPEED;
+        axeStats.Damage *= DAMAGE_MULTIPLIER;
     }
 
     Vector2 ViewportToDiddieView(Vector2 viewport) {

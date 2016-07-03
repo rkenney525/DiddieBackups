@@ -10,6 +10,11 @@ public class AxControlAbility : MonoBehaviour {
     /// </summary>
     private readonly float TTL = 2.5f;
 
+    static AxControlAbility() {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Projectile"), LayerMask.NameToLayer("Hittable"), false);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Projectile"), LayerMask.NameToLayer("Default"), true);
+    }
+
     /// <summary>
     /// Kick off the waiting coroutine
     /// </summary>
