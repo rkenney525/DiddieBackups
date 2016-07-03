@@ -7,6 +7,9 @@ public class ComputerInputController : MonoBehaviour {
     private bool jump = false;
     private bool jumpPrep = false;
     private Camera cam;
+    private float shockDelayCountdown = 0f;
+
+    public float ShockAttackDelay = 1f;
 
     // Use this for initialization
     void Start() {
@@ -26,6 +29,7 @@ public class ComputerInputController : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        shockDelayCountdown = Mathf.Max(shockDelayCountdown - Time.deltaTime, 0f);
         // Pass all parameters to the character control script.
         float horizontal = Input.GetAxis("JoyLeftHorizontal");
         control.NormalMove(horizontal, jump);
@@ -34,6 +38,10 @@ public class ComputerInputController : MonoBehaviour {
         float lightningX = Input.GetAxis("JoyRightHorizontal");
         float lightningY = Input.GetAxis("JoyRightVertical");
 
-        control.ShootLightning(new Vector2(lightningX, lightningY));
+        if (shockDelayCountdown == 0f)
+        {
+            control.ShootLightning(new Vector2(lightningX, lightningY));
+            shockDelayCountdown = ShockAttackDelay;
+        }
     }
 }

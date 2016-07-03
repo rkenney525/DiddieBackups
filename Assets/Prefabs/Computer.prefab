@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ed234018045164d8bd4aa6d2d38458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShockAttackDelay: 3
 --- !u!114 &11478452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AirControlModifier: 0.5
-  AxeReference: {fileID: 0}
+  ShockReference: {fileID: 148756, guid: b6725c65376865349ab37bc74ab919dc, type: 2}
 --- !u!212 &21280194
 SpriteRenderer:
   m_ObjectHideFlags: 1

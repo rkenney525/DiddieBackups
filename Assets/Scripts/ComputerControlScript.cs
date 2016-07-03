@@ -12,13 +12,16 @@ public class ComputerControlScript : MonoBehaviour {
         [SerializeField]
         private float AirControlModifier = 0.5f;
 
-        [SerializeField]
-        public GameObject AxeReference;
+        public GameObject ShockReference;
+       
+        //[SerializeField]
+        //public GameObject AxeReference;
 
         // Attributes
         private GroundDetectionScript GroundCheck;
         private Rigidbody2D Rigidbody2D;
         private Animator anim;
+        
         // Constants
         private const float GroundCheckRadius = .05f;
         private const float CeilingRadius = .01f;
@@ -44,6 +47,7 @@ public class ComputerControlScript : MonoBehaviour {
         }
 
         internal void NormalMove(float horizontal, bool jump) {
+            
             // Move the character
             // X
             float moveX = (!this.GroundCheck.Grounded ? this.AirControlModifier : 1) * horizontal * MaxSpeed;
@@ -63,6 +67,7 @@ public class ComputerControlScript : MonoBehaviour {
                 this.Rigidbody2D.velocity.y
             );
 
+            anim.SetBool("moving", Mathf.Abs(this.Rigidbody2D.velocity.x)>0f);
 
             // If the player should jump...
             if (this.GroundCheck.Grounded && jump) {
@@ -72,7 +77,12 @@ public class ComputerControlScript : MonoBehaviour {
         }
 
         public void ShootLightning(Vector2 angle) {
-            // TODO shoot lightning
+            if (Mathf.Abs(angle.x+angle.y)>0f)
+            {
+                GameObject attack = Instantiate(ShockReference);
+                attack.transform.position = this.transform.position;
+                
+            }
         }
 
         Vector2 ViewportToDiddieView(Vector2 viewport) {
