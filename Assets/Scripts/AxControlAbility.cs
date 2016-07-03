@@ -29,7 +29,7 @@ public class AxControlAbility : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.layer == LayerMask.NameToLayer("PlayerHittable")) {
             coll.gameObject.GetComponent<DamageTakingAbility>().TakeDamage(GetComponent<Stats>().Damage);
-        } else if (coll.gameObject.layer == LayerMask.NameToLayer("PlayerProjectile")) {
+        } else if (coll.gameObject.layer == LayerMask.NameToLayer("ComputerProjectile")) {
             Destroy(coll.gameObject);
             Destroy(gameObject);
         }

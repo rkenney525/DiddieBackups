@@ -6,20 +6,23 @@ public class DamageTakingAbility : MonoBehaviour {
     [SerializeField]
     public float health;
 
+    public float currentHealth;
+
     private Animator anim;
 
     void Start() {
+        currentHealth = health;
         anim = GetComponent<Animator>();
     }
 
     public void TakeDamage(float damage) {
-        if (!immune) {
+        if (!immune && currentHealth > 0) {
             anim.SetTrigger("hit");
-            health -= damage;
-            if (health <= 0f) {
+            currentHealth -= damage;
+            if (currentHealth <= 0f) {
                 Die();
             } else {
-                MakeImmune(3f);
+                StartCoroutine(MakeImmune(3f));
             }
         }
     }
@@ -31,8 +34,14 @@ public class DamageTakingAbility : MonoBehaviour {
         immune = false;
     }
 
+    private IEnumerator DoRespawn() {
+        yield return new WaitForSeconds(2f);
+        GetComponent<Respawnable>().Respawn();
+    }
+
     public void Die() {
         anim.SetBool("dead", true);
-        // TODO respawn
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        StartCoroutine(DoRespawn());
     }
 }

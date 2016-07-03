@@ -11,5 +11,8 @@ public class Collisions : MonoBehaviour {
 
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("PlayerHittable"), LayerMask.NameToLayer("ComputerHittable"), false);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("PlayerProjectile"), LayerMask.NameToLayer("ComputerProjectile"), true);
+
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("ComputerProjectile"), LayerMask.NameToLayer("ComputerProjectile"), false);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("PlayerProjectile"), LayerMask.NameToLayer("PlayerProjectile"), false);
     }
 }

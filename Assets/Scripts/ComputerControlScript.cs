@@ -12,9 +12,6 @@ public class ComputerControlScript : MonoBehaviour {
         [SerializeField]
         private float AirControlModifier = 0.5f;
 
-        [SerializeField]
-        public GameObject AxeReference;
-
         // Attributes
         private GroundDetectionScript GroundCheck;
         private Rigidbody2D Rigidbody2D;
