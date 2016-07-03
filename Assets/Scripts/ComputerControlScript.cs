@@ -71,22 +71,8 @@ public class ComputerControlScript : MonoBehaviour {
             }
         }
 
-        public void ThrowAxe(Vector2 position, Vector2 reticule) {
-            reticule = ViewportToDiddieView(reticule);
-            GameObject axe = Instantiate(AxeReference);
-            Vector2 velocity = new Vector2(reticule.x,
-                reticule.y) * AXE_SPEED;
-            Rigidbody2D axeBody = axe.GetComponent<Rigidbody2D>();
-            AxeStats axeStats = axe.GetComponent<AxeStats>();
-
-            // movement
-            axeBody.position = transform.position;
-            axeBody.velocity = velocity;
-
-            // rotation
-            float rotation = ROTATE_SPEED * (velocity.x < 0 ? 1f : -1f);
-            axeBody.AddTorque(rotation, ForceMode2D.Force);
-            axeStats.Damage *= DAMAGE_MULTIPLIER;
+        public void ShootLightning(Vector2 position, Vector2 reticule) {
+            // TODO shoot lightning
         }
 
         Vector2 ViewportToDiddieView(Vector2 viewport) {
