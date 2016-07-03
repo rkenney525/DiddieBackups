@@ -6,14 +6,11 @@ using System.Collections;
 /// </summary>
 public class ComputerControlScript : MonoBehaviour {
         // Configurable properties
-        private float MaxSpeed = 2f;
+        private float MaxSpeed = 3.5f;
         private float JumpForce = 200f;
         [Range(0, 1)]
         [SerializeField]
         private float AirControlModifier = 0.5f;
-
-        [SerializeField]
-        public GameObject AxeReference;
 
         // Attributes
         private GroundDetectionScript GroundCheck;
