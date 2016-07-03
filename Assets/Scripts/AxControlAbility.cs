@@ -28,7 +28,7 @@ public class AxControlAbility : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.layer == LayerMask.NameToLayer("PlayerHittable")) {
-            coll.gameObject.GetComponent<ComputerControlScript>().TakeDamage(GetComponent<AxeStats>().Damage);
+            coll.gameObject.GetComponent<DamageTakingAbility>().TakeDamage(GetComponent<AxeStats>().Damage);
         }
     }
 }

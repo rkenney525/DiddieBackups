@@ -105,28 +105,6 @@ public class ComputerControlScript : MonoBehaviour {
             }
         }
 
-        public void TakeDamage(float damage) {
-            if (!immune) {
-                anim.SetTrigger("hit");
-                health -= damage;
-                if (health <= 0f) {
-                    Die();
-                } else {
-                    MakeImmune(2f);
-                }
-            }
-        }
-
-        private IEnumerator MakeImmune(float time) {
-            immune = true;
-            yield return new WaitForSeconds(time);
-            immune = false;
-        }
-
-        public void Die() {
-            anim.SetBool("dead", true);
-            //rigidbody2d.constraints = RigidbodyConstraints2D.FreezeAll;
-            // TODO respawn
-        }
+       
     
 }
