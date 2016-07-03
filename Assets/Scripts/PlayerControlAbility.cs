@@ -27,7 +27,7 @@ public class PlayerControlAbility : MonoBehaviour {
     private const float AXE_SPEED = 10.0f;
     private const float ROTATE_SPEED = 360f;
 
-    private float DAMAGE_MULTIPLIER = 1.0f;
+    private float DAMAGE_MULTIPLIER = 5.0f;
 
     // Use this for initialization
     void Start() {

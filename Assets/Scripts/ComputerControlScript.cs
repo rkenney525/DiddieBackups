@@ -48,6 +48,7 @@ public class ComputerControlScript : MonoBehaviour {
     }
 
     private IEnumerator SwitchSupplier(float time) {
+        stopped = true;
         yield return new WaitForSeconds(time);
         Vector2 temp = to;
         to = from;
@@ -61,15 +62,18 @@ public class ComputerControlScript : MonoBehaviour {
         bool moving = false;
         if (!stopped) {
             moving = true;
-            float distCovered = (Time.time - startTime) * Speed;
-            //float fracJourney = distCovered / journeyLength;
-            //if (fracJourney >= 1.0f) {
-            //    stopped = true;
-            //    Switch();
-            //}
-            //float tx = Mathf.Lerp(from.x, to.x, fracJourney);
-            float tx = transform.position.x + (direction * distCovered);
-            transform.position = new Vector3(tx, transform.position.y, transform.position.z);
+
+            if (Mathf.Abs(transform.position.x - to.x) < 0.05f) {
+                Switch();
+                return;
+            }
+
+            Vector2 velocity = new Vector2(Speed, rigidbody2d.velocity.y);
+            if (transform.position.x > to.x) {
+                velocity.x *= -1;
+            }
+
+            rigidbody2d.velocity = velocity;
 
         }
         anim.SetBool("moving", moving);
@@ -103,6 +107,7 @@ public class ComputerControlScript : MonoBehaviour {
 
     private void Die() {
         anim.SetBool("dead", true);
+        rigidbody2d.constraints = RigidbodyConstraints2D.FreezeAll;
         stopped = true;
     }
 }
